@@ -1,0 +1,5 @@
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\bin\ICSharpCode.NRefactory.dll
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\bin\ICSharpCode.NRefactory.pdb
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\src\Libraries\NRefactory\Project\obj\Debug\ResolveAssemblyReference.cache
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\src\Libraries\NRefactory\Project\obj\Debug\ICSharpCode.NRefactory.dll
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\src\Libraries\NRefactory\Project\obj\Debug\ICSharpCode.NRefactory.pdb

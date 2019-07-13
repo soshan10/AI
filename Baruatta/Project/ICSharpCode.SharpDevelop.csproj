@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50215</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2748AD25-9C63-4E12-877B-4DCE96FBED54}</ProjectGuid>
+    <AssemblyName>ICSharpCode.SharpDevelop</AssemblyName>
+    <OutputTarget>Library</OutputTarget>
+    <NoStdLib>False</NoStdLib>
+    <NoConfig>False</NoConfig>
+    <OutputType>Library</OutputType>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\ICSharpCode.SharpDevelop.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>88080384</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DelaySign>False</DelaySign>
+    <NoWarn>0809 1591</NoWarn>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>..\..\..\..\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>Full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG,TRACE;PUBLICINTERPROCESS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>PdbOnly</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE;PUBLICINTERPROCESS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>..\Library\NRefactory\Project\obj\Release\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\Library\Mono.Cecil\bin\net_4_0_Release\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Configuration\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Src\Commands\SharpDevelopRoutedCommands.cs" />
+    <Compile Include="Src\Commands\ViewInBrowser.cs" />
+    <None Include="ICSharpCode.SharpDevelop.addin" />
+    <None Include="Src\Gui\Dialogs\ExtractInterfaceDialog.cs">
+      <Link>Src\Services\RefactoringService\ExtractInterfaceDialog.cs</Link>
+    </None>
+    <None Include="Src\Gui\Dialogs\ExtractInterfaceDialog.Designer.cs">
+      <Link>Src\Services\RefactoringService\ExtractInterfaceDialog.Designer.cs</Link>
+      <DependentUpon>ExtractInterfaceDialog.cs</DependentUpon>
+    </None>
+    <Compile Include="Src\Gui\Components\LocalizedPropertyGrid\CustomTypeConverter\BooleanTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Src\Gui\Components\LocalizedPropertyGrid\CustomTypeConverter\TemplateTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Src\Gui\Components\LocalizedPropertyGrid\LocalizedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Src\Gui\Components\LocalizedPropertyGrid\LocalizedPropertyAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Src\Gui\Components\LocalizedPropertyGrid\LocalizedPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Src\Internal\ConditionEvaluators\ViewInBrowserConditionEvaluator.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\WriteableProjectEvaluator.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\WriteableSolutionEvaluator.cs" />
+    <Compile Include="Src\Internal\Doozers\IOptionPanel.cs" />
+    <Compile Include="Src\Internal\ExternalTool\ExternalTool.cs" />
+    <Compile Include="Src\Internal\Templates\Project\ProjectTemplate.cs" />
+    <Compile Include="Src\Internal\Templates\File\FileDescriptionTemplate.cs" />
+    <Compile Include="Src\Internal\Templates\File\FileTemplate.cs" />
+    <Compile Include="Src\Internal\Templates\TextTemplate.cs" />
+    <Compile Include="Src\Internal\Templates\File\INewFileCreator.cs" />
+    <Compile Include="Src\Project\Behaviors\DefaultProjectBehavior.cs" />
+    <Compile Include="Src\Project\Behaviors\DotNetStartBehavior.cs" />
+    <Compile Include="Src\Project\Behaviors\ProjectBehavior.cs" />
+    <Compile Include="Src\Project\Behaviors\ProjectBehaviorService.cs" />
+    <Compile Include="Src\Project\Behaviors\ProjectBehaviorSupportedConditionEvaluator.cs" />
+    <Compile Include="Src\Project\Behaviors\ResXConverter.cs" />
+    <Compile Include="Src\Project\BuildEngine.cs" />
+    <Compile Include="Src\Project\ContextSpecificProperties.cs" />
+    <Compile Include="Src\Project\Converter\IUpgradableProject.cs" />
+    <Compile Include="Src\Project\IBuildFeedbackSink.cs" />
+    <Compile Include="Src\Project\IProjectChangeWatcher.cs" />
+    <Compile Include="Src\Project\IProjectItemBackendStore.cs" />
+    <Compile Include="Src\Project\Items\ServiceReferenceProjectItem.cs" />
+    <Compile Include="Src\Project\Items\ServiceReferencesProjectItem.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\BuildJob.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\EventSource.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\EventTypes.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\ExtendedBinaryReader.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\KnownFrameworkAssemblies.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\MSBuildAdditionalLogger.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\MSBuildLoggerFilter.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\SDConsoleLogger.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\BuildWorkerManager.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\MSBuildEngine.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\TargetingPackWarningWorkaround.cs" />
+    <Compile Include="Src\Project\MSBuildEngine\WorkerProcess.cs" />
+    <Compile Include="Src\Project\MSBuildFileProject.cs" />
+    <Compile Include="Src\Project\MSBuildItemWrapper.cs" />
+    <Compile Include="Src\Project\PortableLibrary\CheckPortableLibraryInstalled.cs" />
+    <Compile Include="Src\Project\PortableLibrary\ConvertToPortableLibraryProjectBehavior.cs" />
+    <Compile Include="Src\Project\PortableLibrary\PickPortableTargetFramework.cs" />
+    <Compile Include="Src\Project\PortableLibrary\PortableLibraryProjectBehavior.cs" />
+    <Compile Include="Src\Project\PortableLibrary\PortableTargetFramework.cs" />
+    <Compile Include="Src\Project\PortableLibrary\Profile.cs" />
+    <Compile Include="Src\Project\PortableLibrary\ProfileList.cs" />
+    <Compile Include="Src\Project\PortableLibrary\SupportedFramework.cs" />
+    <Compile Include="Src\Project\ProjectChangeWatcher.cs" />
+    <Compile Include="Src\Project\ProjectLoadInformation.cs" />
+    <Compile Include="Src\Project\ProjectStartException.cs" />
+    <Compile Include="Src\Project\ProjectLoadException.cs" />
+    <Compile Include="Src\Project\ProjectPropertyChangedEventArgs.cs" />
+    <Compile Include="Src\Project\ProjectUpgradeException.cs" />
+    <Compile Include="Src\Project\Solution\Project_TypeGuids.cs" />
+    <Compile Include="Src\Project\TargetFramework.cs" />
+    <Compile Include="Src\Services\Debugger\BreakpointBookmark.cs" />
+    <Compile Include="Src\Services\Debugger\BreakpointBookmarkEventArgs.cs" />
+    <Compile Include="Src\Services\Debugger\DecompiledBreakpointBookmark.cs" />
+    <Compile Include="Src\Services\Debugger\Tooltips\IPinDebuggerControl.cs" />
+    <Compile Include="Src\Services\Debugger\Tooltips\ITreeNode.cs" />
+    <Compile Include="Src\Services\Debugger\Tooltips\IVisualizerCommand.cs" />
+    <Compile Include="Src\Services\Debugger\Tooltips\PinBookmark.cs" />
+    <Compile Include="Src\Services\DisplayBinding\AutoDetectDisplayBinding.cs" />
+    <Compile Include="Src\Services\DisplayBinding\ExternalProcessDisplayBinding.cs" />
+    <Compile Include="Src\Services\DisplayBinding\ISecondaryDisplayBinding.cs" />
+    <Compile Include="Src\Services\DisplayBinding\ShellExecuteDisplayBinding.cs" />
+    <Compile Include="Src\Services\File\FileChangeWatcher.cs" />
+    <Compile Include="Src\Services\File\OpenedFile.cs" />
+    <Compile Include="Src\Services\File\RecentOpen.cs" />
+    <Compile Include="Src\Services\LanguageBinding\AggregatedLanguageBinding.cs" />
+    <Compile Include="Src\Services\LanguageBinding\DefaultLanguageBinding.cs" />
+    <Compile Include="Src\Services\LanguageBinding\ILanguageBinding.cs" />
+    <Compile Include="Src\Services\LanguageBinding\LanguageBindingDoozer.cs" />
+    <Compile Include="Src\Services\LanguageBinding\LanguageBindingService.cs" />
+    <Compile Include="Src\Services\Language\LanguageService.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\WindowActiveEvaluator.cs" />
+    <Compile Include="Src\Internal\Doozers\DefaultOptionPanelDescriptor.cs" />
+    <Compile Include="Src\Internal\Doozers\OptionPanelDoozer.cs" />
+    <Compile Include="Src\Internal\Doozers\IOptionPanelDescriptor.cs" />
+    <Compile Include="Src\Services\File\FileService.cs" />
+    <Compile Include="Src\Services\File\FileEventArgs.cs" />
+    <Compile Include="Src\Services\MimeTypeDetection.cs" />
+    <Compile Include="Src\Services\ParserService\AssemblyParserService.cs" />
+    <Compile Include="Src\Services\ParserService\LoadSolutionProjects.cs" />
+    <Compile Include="Src\Services\ParserService\ParserService.cs" />
+    <Compile Include="Src\Services\ProjectService\CompileModifiedProjectsOnly.cs" />
+    <Compile Include="Src\Services\ProjectService\SolutionConfigurationEventHandler.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\BoolToVisibilityConverter.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextAction.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextActionsBulbPopup.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextActionsBulbViewModel.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextActionsHelper.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextActionsPopupBase.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextActionsProvider.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextActionsService.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\EditorContext.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\IContextAction.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextActionsPopup.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextActionsViewModel.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\ContextActionViewModel.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\IContextActionCache.cs" />
+    <Compile Include="Src\Services\RefactoringService\ContextActions\IContextActionsProvider.cs" />
+    <Compile Include="Src\Services\RefactoringService\ExtractInterfaceOptions.cs" />
+    <Compile Include="Src\Services\RefactoringService\GoToClassAction.cs" />
+    <Compile Include="Src\Services\RefactoringService\GoToMemberAction.cs" />
+    <Compile Include="Src\Services\Tasks\ErrorPainter.cs" />
+    <Compile Include="Src\Services\Tasks\Task.cs" />
+    <Compile Include="Src\Services\Tasks\TaskService.cs" />
+    <Compile Include="Src\Services\DisplayBinding\IDisplayBinding.cs" />
+    <Compile Include="Src\Internal\ExternalTool\ToolLoader.cs" />
+    <Compile Include="Src\Services\ProjectBinding\IProjectBinding.cs" />
+    <Compile Include="Src\Internal\Templates\Project\ProjectCreateInformation.cs" />
+    <Compile Include="Src\Services\ProjectBinding\ProjectBindingService.cs" />
+    <Resource Include="Src\Services\RefactoringService\ContextActions\bulb.png" />
+    <Resource Include="Src\Services\RefactoringService\ContextActions\pencil.png" />
+    <Compile Include="Src\Services\DisplayBinding\DisplayBindingDoozer.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\CombineOpenEvaluator.cs" />
+    <Compile Include="Src\Services\ProjectBinding\ProjectBindingDoozer.cs" />
+    <Compile Include="Src\Services\Language\Language.cs" />
+    <Compile Include="Src\Services\DisplayBinding\DisplayBindingService.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\ProjectActiveEvaluator.cs" />
+    <Compile Include="Src\Services\AmbienceService\NetAmbience.cs" />
+    <Compile Include="Src\Services\AmbienceService\AmbienceService.cs" />
+    <Compile Include="Src\Services\AmbienceService\CodeDOMGeneratorUtility.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\WindowOpenEvaluator.cs" />
+    <Compile Include="Src\Internal\Templates\Project\ProjectDescriptor.cs" />
+    <Compile Include="Src\Internal\Templates\Project\SolutionDescriptor.cs" />
+    <Compile Include="Src\Commands\AutostartCommands.cs" />
+    <Compile Include="Src\Commands\EditCommands.cs" />
+    <Compile Include="Src\Commands\FileCommands.cs" />
+    <Compile Include="Src\Commands\FileTabStripCommands.cs" />
+    <Compile Include="Src\Commands\HelpCommands.cs" />
+    <Compile Include="Src\Commands\MenuItemBuilders.cs" />
+    <Compile Include="Src\Commands\ProjectMenuCommands.cs" />
+    <Compile Include="Src\Commands\BuildCommands.cs" />
+    <Compile Include="Src\Commands\SideBarCommands.cs" />
+    <Compile Include="Src\Commands\ToolsCommands.cs" />
+    <Compile Include="Src\Commands\WindowCommands.cs" />
+    <Compile Include="Src\Services\IconService.cs" />
+    <Compile Include="Src\Services\ClassBrowserIcons\ClassBrowserIconService.cs" />
+    <Compile Include="Src\Services\StatusBar\StatusBarService.cs" />
+    <Compile Include="Src\Commands\VBConverter\ConvertBuffer.cs" />
+    <Compile Include="Src\Commands\CustomStringTagProvider.cs" />
+    <Compile Include="Src\Commands\VBConverter\CSharpConvertBuffer.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\ActiveViewContentUntitledEvaluator.cs" />
+    <Compile Include="Src\Services\Debugger\DebuggerService.cs" />
+    <Compile Include="Src\Internal\Templates\File\ScriptRunner.cs" />
+    <Compile Include="Src\Internal\Templates\StandardHeaders.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\IsProcessRunningEvaluator.cs" />
+    <Compile Include="Src\Internal\Doozers\PadDoozer.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\ActiveContentExtensionEvaluator.cs" />
+    <Compile Include="Src\Services\Debugger\IDebugger.cs" />
+    <Compile Include="Src\Services\Debugger\DefaultDebugger.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\ActiveWindowStateEvaluator.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\OpenWindowStateEvaluator.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\DebuggerSupportsEvaluator.cs" />
+    <Compile Include="Src\Commands\ChooseLayoutCommand.cs" />
+    <Compile Include="Src\Project\Items\FileProjectItem.cs" />
+    <Compile Include="Src\Project\IProject.cs" />
+    <Compile Include="Src\Project\Items\ProjectItem.cs" />
+    <Compile Include="Src\Project\Items\ReferenceProjectItem.cs" />
+    <Compile Include="Src\Project\Solution\Solution.cs" />
+    <Compile Include="Src\Services\ProjectService\ProjectService.cs" />
+    <Compile Include="Src\Services\ProjectService\SolutionEventHandler.cs" />
+    <Compile Include="Src\Services\ProjectService\ProjectEventHandler.cs" />
+    <Compile Include="Src\Commands\FileMenuCommands.cs" />
+    <Compile Include="Src\Services\ParserService\ParseInformationEventArgs.cs" />
+    <Compile Include="Src\Services\ProjectService\ProjectConfigurationEventHandler.cs" />
+    <Compile Include="Src\Commands\DebugCommands.cs" />
+    <Compile Include="Src\Project\Items\ProjectReferenceProjectItem.cs" />
+    <Compile Include="Src\Services\ProjectBinding\ProjectBindingDescriptor.cs" />
+    <Compile Include="Src\Services\DisplayBinding\DisplayBindingDescriptor.cs" />
+    <Compile Include="Src\Services\ParserService\Doozer\ParserDoozer.cs" />
+    <Compile Include="Src\Services\ParserService\Doozer\ParserDescriptor.cs" />
+    <Compile Include="Src\Internal\Doozers\PadDescriptor.cs" />
+    <Compile Include="Src\Project\MissingProject.cs" />
+    <Compile Include="Src\Project\UnknownProject.cs" />
+    <Compile Include="Src\Project\Solution\SolutionFolder.cs" />
+    <Compile Include="Src\Project\Solution\SolutionItem.cs" />
+    <Compile Include="Src\Project\Solution\ProjectSection.cs" />
+    <Compile Include="Src\Project\Solution\ISolutionFolderContainer.cs" />
+    <Compile Include="Src\Project\Solution\ISolutionFolder.cs" />
+    <Compile Include="Src\Project\Solution\AbstractSolutionFolder.cs" />
+    <Compile Include="Src\Project\Items\ComReferenceProjectItem.cs" />
+    <Compile Include="Src\Services\ProjectService\ProjectItemEventHandler.cs" />
+    <Compile Include="Src\Project\Items\TypeLibrary.cs" />
+    <Compile Include="Src\Project\Items\UnknownProjectItem.cs" />
+    <Compile Include="Src\Services\File\FileRenameEventArgs.cs" />
+    <Compile Include="Src\Services\ProjectService\SolutionFolderEventHandler.cs" />
+    <Compile Include="Src\Project\WebReferenceUrl.cs" />
+    <EmbeddedResource Include="Resources\CodeGenerationOptionsPanel.xfrm" />
+    <EmbeddedResource Include="Resources\CommonAboutDialog.xfrm" />
+    <Compile Include="Configuration\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Resources\EditStandardHeaderPanel.xfrm" />
+    <EmbeddedResource Include="Resources\ExternalToolOptions.xfrm" />
+    <EmbeddedResource Include="Resources\FontSelectionPanel.xfrm" />
+    <EmbeddedResource Include="Resources\NewFileWithNameDialog.xfrm" />
+    <EmbeddedResource Include="Resources\NewFileDialog.xfrm" />
+    <EmbeddedResource Include="Resources\OutputWindowOptionsPanel.xfrm" />
+    <EmbeddedResource Include="Resources\SelectStylePanel.xfrm" />
+    <EmbeddedResource Include="Resources\WordCountDialog.xfrm" />
+    <Compile Include="Src\Bookmarks\BookmarkBase.cs" />
+    <Compile Include="Src\Bookmarks\Commands\MenuCommands.cs" />
+    <Compile Include="Src\Bookmarks\IBookmarkMargin.cs" />
+    <Compile Include="Src\Bookmarks\Pad\Nodes\BookmarkFolderNode.cs" />
+    <Compile Include="Src\Bookmarks\Pad\Nodes\BookmarkNode.cs" />
+    <Compile Include="Src\Bookmarks\Pad\BookmarkPad.cs" />
+    <Compile Include="Src\Bookmarks\Pad\BookmarkPadToolbarCommands.cs" />
+    <Compile Include="Src\Bookmarks\SDBookmark.cs" />
+    <Compile Include="Src\Bookmarks\BookmarkEventHandler.cs" />
+    <Compile Include="Src\Bookmarks\BookmarkManager.cs" />
+    <Compile Include="Src\Bookmarks\SDMarkerBookmark.cs" />
+    <Compile Include="Src\Services\Tasks\TaskEventHandler.cs" />
+    <Compile Include="Src\Project\MSBuildEnums.cs" />
+    <EmbeddedResource Include="Resources\ProjectOptions\ApplicationSettings.xfrm" />
+    <EmbeddedResource Include="Resources\ProjectOptions\Publish.xfrm" />
+    <EmbeddedResource Include="Resources\ProjectOptions\Signing.xfrm" />
+    <EmbeddedResource Include="Resources\ProjectOptions\DebugOptions.xfrm" />
+    <Compile Include="Src\Bookmarks\BookmarkConverter.cs" />
+    <Compile Include="Src\Bookmarks\ClassMemberBookmark.cs" />
+    <Compile Include="Src\Services\RefactoringService\RefactoringService.cs" />
+    <Compile Include="Src\Services\RefactoringService\Reference.cs" />
+    <Compile Include="Src\Services\ProjectService\ParseableFileContentFinder.cs" />
+    <Compile Include="Src\Services\ParserService\ParseProjectContent.cs" />
+    <Compile Include="Src\Project\Items\ImportProjectItem.cs" />
+    <EmbeddedResource Include="Resources\CodeCompletionOptionPanel.xfrm" />
+    <Compile Include="Src\Services\Debugger\CurrentLineBookmark.cs" />
+    <Compile Include="Src\Services\Debugger\DebuggerDoozer.cs" />
+    <Compile Include="Src\Project\Solution\SolutionPreferences.cs" />
+    <Compile Include="Src\Project\ConfigurationGuiHelper.cs" />
+    <EmbeddedResource Include="Resources\ProjectOptions\CreateKey.xfrm" />
+    <Compile Include="Src\Services\RefactoringService\RefactoringMenuBuilder.cs" />
+    <Compile Include="Src\Services\RefactoringService\LocalVariableRefactoring.cs" />
+    <Compile Include="Src\Services\RefactoringService\FindReferencesAndRenameHelper.cs" />
+    <Compile Include="Src\Internal\Doozers\DirectoryDoozer.cs" />
+    <Compile Include="Src\Project\ConfigurationGuiBinding.cs" />
+    <Compile Include="Src\Project\ChooseStorageLocationButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Src\Project\Items\WebReferencesProjectItem.cs" />
+    <Compile Include="Src\Project\Converter\LanguageConverter.cs" />
+    <Compile Include="Src\Internal\Templates\TemplateCategorySortOrderFile.cs" />
+    <Compile Include="Src\Services\ProjectService\ProjectLoader.cs" />
+    <Compile Include="Src\Util\MultiDictionary.cs" />
+    <Compile Include="Src\Util\DotnetDetection.cs" />
+    <Compile Include="Src\Util\FakeXmlViewContent.cs" />
+    <Compile Include="Src\Util\KeyComparer.cs" />
+    <Compile Include="Src\Util\ReactiveExtensions.cs" />
+    <Compile Include="Src\Util\TreeNode.cs" />
+    <Compile Include="Src\Util\NativeMethods.cs" />
+    <Compile Include="Src\Util\ProcessRunnerException.cs" />
+    <Compile Include="Src\Util\LineReceivedEventArgs.cs" />
+    <Compile Include="Src\Util\ProcessRunner.cs" />
+    <Compile Include="Src\Services\RefactoringService\NamespaceRefactoringService.cs" />
+    <Compile Include="Src\Services\RefactoringService\RefactorMenu.cs" />
+    <Compile Include="Src\Services\NavigationService\DefaultNavigationPoint.cs" />
+    <Compile Include="Src\Services\NavigationService\INavigationPoint.cs" />
+    <Compile Include="Src\Services\NavigationService\NavigationService.cs" />
+    <Compile Include="Src\Commands\NavigationCommands.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\NavigationConditionEvaluators.cs" />
+    <Compile Include="Src\Project\BuildResults.cs" />
+    <Compile Include="Src\Project\BuildError.cs" />
+    <Compile Include="Src\Services\HelpProvider.cs" />
+    <Compile Include="Src\Services\ParserService\CodeCompletionOptions.cs" />
+    <Compile Include="Src\Services\ParserService\DomHostCallback.cs" />
+    <Compile Include="Src\Services\ParserService\Doozer\ProjectContentRegistryDescriptor.cs" />
+    <Compile Include="Src\Services\ParserService\Doozer\ProjectContentRegistryDoozer.cs" />
+    <Compile Include="Src\Internal\ConditionEvaluators\CompareProjectPropertyConditionEvaluator.cs" />
+    <Compile Include="Src\Services\ParserService\NetCFProjectContentRegistry.cs" />
+    <Compile Include="Src\Util\ExtensionMethods.cs" />
+    <Compile Include="Src\Util\DebugTimer.cs" />
+    <Compile Include="Src\Project\CustomTool.cs" />
+    <Compile Include="Src\Project\MSBuildBasedProject.cs" />
+    <Compile Include="Src\Project\MSBuildItemDefinitionGroup.cs" />
+    <Compile Include="Src\Project\AbstractProject.cs" />
+    <Compile Include="Src\Project\BuildOptions.cs" />
+    <Compile Include="Src\Project\IParser.cs" />
+    <Compile Include="Src\Project\CompilableProject.cs" />
+    <Compile Include="Src\Project\MSBuildInternals.cs" />
+    <Compile Include="Src\Util\ScrollUtils.cs" />
+    <Compile Include="Src\Util\SDWindowsFormsHost.cs" />
+    <Compile Include="Src\Util\ReadOnlyCollectionWrapper.cs" />
+    <Compile Include="Src\Project\Items\ItemType.cs" />
+    <Compile Include="Src\Project\BuildTarget.cs" />
+    <Compile Include="Src\Util\GenericConverter.cs" />
+    <Compile Include="Src\Internal\Templates\TemplateLoadException.cs" />
+    <Compile Include="Src\Util\ThreadSafeServiceProvider.cs" />
+    <Compile Include="Src\Util\UnclosableStream.cs" />
+    <Compile Include="Src\Util\WeakCollection.cs" />
+    <Compile Include="Src\Util\WindowsFormsPrinting.cs" />
+    <Compile Include="Src\Util\WpfSynchronizeInvoke.cs" />
+    <Compile Include="Src\Util\WorkerThread.cs" />
+    <EmbeddedResource Include="Resources\DefaultManifest.manifest" />
+    <None Include="Src\Gui\Dialogs\ExtractInterfaceDialog.resx">
+      <Link>Src\Services\RefactoringService\ExtractInterfaceDialog.resx</Link>
+      <DependentUpon>ExtractInterfaceDialog.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="themes\generic.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Src\Bookmarks\Pad\Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\ICSharpCode.Core.csproj">
+      <Project>{35CEF10F-2D4C-45F2-9DD1-161E0FEC583C}</Project>
+      <Name>ICSharpCode.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <Import Project="PostBuildEvent.proj" />
+</Project>

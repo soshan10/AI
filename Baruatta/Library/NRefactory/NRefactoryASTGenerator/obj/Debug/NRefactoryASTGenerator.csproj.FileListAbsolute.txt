@@ -1,0 +1,5 @@
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\src\Libraries\NRefactory\NRefactoryASTGenerator\bin\Debug\NRefactoryASTGenerator.exe
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\src\Libraries\NRefactory\NRefactoryASTGenerator\bin\Debug\NRefactoryASTGenerator.pdb
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\src\Libraries\NRefactory\NRefactoryASTGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\src\Libraries\NRefactory\NRefactoryASTGenerator\obj\Debug\NRefactoryASTGenerator.exe
+D:\Codedumps\icsharpcode-SharpDevelop-4.2.1-58-g58bcbca\icsharpcode-SharpDevelop-58bcbca\src\Libraries\NRefactory\NRefactoryASTGenerator\obj\Debug\NRefactoryASTGenerator.pdb
